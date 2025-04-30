@@ -1,0 +1,30 @@
+@if (map-get($gridConfig, "breakpoint-helper") ) {
+
+   body:after {
+      display: block;
+      position: fixed;
+      padding: 4px;
+      bottom: 20px;
+      right: 20px;
+      height: 28px;
+      width: 50px;
+      z-index: 99999999;
+      
+      background: #333;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 20px;
+      font-family: 'Arial', sans-serif;
+      
+      content: "< SM";
+      @media screen and ( min-width: $breakpoint-sm ) { content: "SM" }
+      @media screen and ( min-width: $breakpoint-md ) { content: "MD" }
+      @media screen and ( min-width: $breakpoint-lg ) { content: "LG" }
+      @media screen and ( min-width: $breakpoint-xl ) { content: "XL" }
+
+   }
+
+}

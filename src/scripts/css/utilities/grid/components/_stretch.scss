@@ -1,0 +1,64 @@
+@mixin stretchCalculation($value) {
+   width: calc( 100% + ( var(--column-width) * #{$value} + ( var(--gutter-width) * ( #{$value} ) + ( var(--gutter-width) * #{$value} / 10 ) ) ) )
+}
+
+@mixin stretch-right($value) { @include stretchCalculation($value); }
+@mixin stretch-left($value) { @include stretchCalculation($value); float: right; }
+
+@mixin stretch-right-sm($value) { @include breakpoint-sm { @include stretchCalculation($value); } }
+@mixin stretch-left-sm($value) { @include breakpoint-sm { @include stretchCalculation($value); float: right; } }
+
+@mixin stretch-right-md($value) { @include breakpoint-md { @include stretchCalculation($value); } }
+@mixin stretch-left-md($value) { @include breakpoint-md { @include stretchCalculation($value); float: right; } }
+
+@mixin stretch-right-lg($value) { @include breakpoint-lg { @include stretchCalculation($value); } }
+@mixin stretch-left-lg($value) { @include breakpoint-lg { @include stretchCalculation($value); float: right; } }
+
+@mixin stretch-right-xl($value) { @include breakpoint-xl { @include stretchCalculation($value); } }
+@mixin stretch-left-xl($value) { @include breakpoint-xl { @include stretchCalculation($value); float: right; } }
+
+
+@if (map-get($gridConfig, "stretch")) {
+
+   /*
+   *	Stretch / Overflow Content within columns ( based on --var(column width) ) 
+   * 
+   *  Usage .stretch-[right/left]-[breakpoint]-# / .stretch-right-md-2
+   */
+   
+   $num: 6; // Number of classes to generate
+
+   @for $i from 0 through $num { 
+      .stretch-right-#{$i} { @include stretchCalculation(#{$i}); }
+      .stretch-left-#{$i} { @include stretchCalculation(#{$i}); float: right; }
+   }
+
+   @include breakpoint-sm { 
+      @for $i from 0 through $num { 
+         .stretch-right-sm-#{$i} { @include stretchCalculation(#{$i}); } 
+         .stretch-left-sm-#{$i} { @include stretchCalculation(#{$i}); float: right; } 
+      }
+   }
+
+   @include breakpoint-md { 
+      @for $i from 0 through $num { 
+         .stretch-right-md-#{$i} { @include stretchCalculation(#{$i}); } 
+         .stretch-left-md-#{$i} { @include stretchCalculation(#{$i}); float: right; } 
+      }
+   }
+
+   @include breakpoint-lg { 
+      @for $i from 0 through $num { 
+         .stretch-right-lg-#{$i} { @include stretchCalculation(#{$i}); } 
+         .stretch-left-lg-#{$i} { @include stretchCalculation(#{$i}); float: right; } 
+      }
+   }
+
+   @include breakpoint-xl { 
+      @for $i from 0 through $num { 
+         .stretch-right-xl-#{$i} { @include stretchCalculation(#{$i}); } 
+         .stretch-left-xl-#{$i} { @include stretchCalculation(#{$i}); float: right; } 
+      }
+   }
+
+}

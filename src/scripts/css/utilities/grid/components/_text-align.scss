@@ -1,0 +1,53 @@
+@mixin text-left { text-align: left }
+@mixin text-right { text-align: right }
+@mixin text-center { text-align: center }
+@mixin text-sm-left { @include breakpoint-sm { text-align: left } }
+@mixin text-sm-right { @include breakpoint-sm { text-align: right } }
+@mixin text-sm-center { @include breakpoint-sm { text-align: center } }
+@mixin text-md-left { @include breakpoint-md { text-align: left } }
+@mixin text-md-right { @include breakpoint-md { text-align: right } }
+@mixin text-md-center { @include breakpoint-md { text-align: center } }
+@mixin text-lg-left { @include breakpoint-lg { text-align: left } }
+@mixin text-lg-right { @include breakpoint-lg { text-align: right } }
+@mixin text-lg-center { @include breakpoint-lg { text-align: center } }
+@mixin text-xl-left { @include breakpoint-xl { text-align: left } }
+@mixin text-xl-right { @include breakpoint-xl { text-align: right } }
+@mixin text-xl-center { @include breakpoint-xl { text-align: center } }
+
+@if (map-get($gridConfig, "text-align")) {
+
+   /*
+   *	Text Alignment
+   *
+   *  Usage .text-[dir]-[breakpoint]
+   */
+
+   .text-left { text-align: left }
+   .text-right { text-align: right }
+   .text-center { text-align: center }
+   
+   @include breakpoint-sm {
+      .text-sm-left { text-align: left }
+      .text-sm-right { text-align: right }
+      .text-sm-center { text-align: center }
+   }
+   
+   @include breakpoint-md {
+      .text-md-left { text-align: left }
+      .text-md-right { text-align: right }
+      .text-md-center { text-align: center }
+   }
+   
+   @include breakpoint-lg {
+      .text-lg-left { text-align: left }
+      .text-lg-right { text-align: right }
+      .text-lg-center { text-align: center }
+   }
+
+   @include breakpoint-xl {
+      .text-xl-left { text-align: left }
+      .text-xl-right { text-align: right }
+      .text-xl-center { text-align: center }
+   }
+
+}

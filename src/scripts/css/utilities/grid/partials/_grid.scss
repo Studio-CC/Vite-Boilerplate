@@ -1,0 +1,389 @@
+
+// DO NOT EDIT
+
+@if (map-get($gridConfig, "grid") ) {
+   
+   /*
+   *	GRID SETTINGS: Define Breakpoints
+   *  
+   *  NOTE: :root { --continer-width } MUST always be less than or equal to the defined breakpoint value
+   *   
+   */
+
+   body {margin: 0}
+   *,::after,::before{box-sizing:border-box}   
+
+}
+
+$breakpoint-sm: '';
+$breakpoint-md: '';
+$breakpoint-lg: '';
+$breakpoint-xl: '';
+
+
+@if (map-get($gridConfig, "sm") ) {
+   $breakpoint-sm: map-get($gridConfig, "sm");
+} @else {
+   $breakpoint-sm: 420px;
+}
+
+@if (map-get($gridConfig, "md") ) {
+   $breakpoint-md: map-get($gridConfig, "md");
+} @else {
+   $breakpoint-md: 769px;
+}
+
+@if (map-get($gridConfig, "lg") ) {
+   $breakpoint-lg: map-get($gridConfig, "lg");
+} @else {
+   $breakpoint-lg: 1280px;
+}
+
+@if (map-get($gridConfig, "xl") ) {
+   $breakpoint-xl: map-get($gridConfig, "xl");
+} @else {
+   $breakpoint-xl: 1280px;
+}
+
+@if (map-get($gridConfig, "grid") ) {
+   :root {
+      --breakpoint-sm: #{$breakpoint-sm};
+      --breakpoint-md: #{$breakpoint-md};
+      --breakpoint-lg: #{$breakpoint-lg};
+      --breakpoint-xl: #{$breakpoint-xl};
+   }
+}
+
+@mixin breakpoint-sm { 
+   @media screen and ( min-width: $breakpoint-sm ) { 
+      @content 
+   } 
+};
+
+@mixin breakpoint-md {
+   @media screen and ( min-width: $breakpoint-md ) { 
+      @content; 
+   } 
+};
+
+@mixin breakpoint-lg { 
+   @media screen and ( min-width: $breakpoint-lg ) { 
+      @content; 
+   } 
+};
+
+@mixin breakpoint-xl { 
+   @media screen and ( min-width: $breakpoint-xl ) { 
+      @content; 
+   } 
+};
+
+@mixin breakpoint-sm-down { 
+   @media screen and ( max-width: $breakpoint-sm ) { 
+      @content 
+   } 
+};
+
+@mixin breakpoint-md-down {
+   @media screen and ( max-width: $breakpoint-md ) { 
+      @content; 
+   } 
+};
+
+@mixin breakpoint-lg-down { 
+   @media screen and ( max-width: $breakpoint-lg ) { 
+      @content; 
+   } 
+};
+
+@mixin breakpoint-xl-down { 
+   @media screen and ( max-width: $breakpoint-xl ) { 
+      @content; 
+   } 
+};
+
+@if (map-get($gridConfig, "grid") ) {
+
+/*
+ *  
+ *  GRID SETTINGS: Variable Gutter / Container Padding / Container Widths Per Breakpoint
+ *  
+ *  NOTE: :root { --continer-width } MUST always be less than or equal to the defined breakpoint value
+ *  
+ *  NOTE: With the calculated --column-width variable, it is possible to shift, offset or add margin/padding that scales exactly with the columns
+ *   
+ *  All values, including zero MUST have a unit, eg px or vw
+ *  
+ */
+
+
+:root { 
+
+   @if (map-get($gridConfig, "gutter-width") ) { 
+      --gutter-width: #{map-get($gridConfig, "gutter-width")}; 
+   } @else { --gutter-width: 20px; }      
+   @if (map-get($gridConfig, "container-padding") ) { 
+      --container-padding: #{map-get($gridConfig, "container-padding")}; 
+   } @else { --container-padding: 30px; }      
+   @if (map-get($gridConfig, "container-width") ) { 
+      --container-width: #{map-get($gridConfig, "container-width")}; 
+   } @else { --container-width: 100vw; }      
+
+   --column-width: calc( ( ( 100vw - ( 100vw - var(--container-width) + (2 * var(--container-padding) ) ) ) * 0.083333333333 ) - var(--gutter-width) );
+   
+}
+
+
+@include breakpoint-sm {
+   :root { 
+      @if (map-get($gridConfig, "gutter-width-sm") ) { 
+         --gutter-width: #{map-get($gridConfig, "gutter-width-sm")}; 
+      } @else { --gutter-width: 20px; }      
+      @if (map-get($gridConfig, "container-padding-sm") ) { 
+         --container-padding: #{map-get($gridConfig, "container-padding-sm")}; 
+      } @else { --container-padding: 30px; }      
+      @if (map-get($gridConfig, "container-width-sm") ) { 
+         --container-width: #{map-get($gridConfig, "container-width-sm")}; 
+      } @else { --container-width: 100vw; }      
+
+      --column-width: calc( ( ( 100vw - ( 100vw - var(--container-width) + (2 * var(--container-padding) ) ) ) * 0.083333333333 ) - var(--gutter-width) );
+   }
+}
+@include breakpoint-md {
+   :root { 
+      @if (map-get($gridConfig, "gutter-width-md") ) { 
+         --gutter-width: #{map-get($gridConfig, "gutter-width-md")}; 
+      } @else { --gutter-width: 20px; }      
+      @if (map-get($gridConfig, "container-padding-md") ) { 
+         --container-padding: #{map-get($gridConfig, "container-padding-md")}; 
+      } @else { --container-padding: 30px; }      
+      @if (map-get($gridConfig, "container-width-md") ) { 
+         --container-width: #{map-get($gridConfig, "container-width-md")}; 
+      } @else { --container-width: 100vw; }  
+
+      --column-width: calc( ( ( 100vw - ( 100vw - var(--container-width) + (2 * var(--container-padding) ) ) ) * 0.083333333333 ) - var(--gutter-width) );
+   }
+}
+@include breakpoint-lg {
+   :root { 
+      @if (map-get($gridConfig, "gutter-width-lg") ) { 
+         --gutter-width: #{map-get($gridConfig, "gutter-width-lg")}; 
+      } @else { --gutter-width: 20px; }      
+      @if (map-get($gridConfig, "container-padding-lg") ) { 
+         --container-padding: #{map-get($gridConfig, "container-padding-lg")}; 
+      } @else { --container-padding: 40px; }      
+      @if (map-get($gridConfig, "container-width-lg") ) { 
+         --container-width: #{map-get($gridConfig, "container-width-lg")}; 
+      } @else { --container-width: 1200px; }  
+
+      --column-width: calc( ( ( 100vw - ( 100vw - var(--container-width) + (2 * var(--container-padding) ) ) ) * 0.083333333333 ) - var(--gutter-width) );
+   }
+}
+@include breakpoint-xl {
+   :root { 
+      @if (map-get($gridConfig, "gutter-width-xl") ) { 
+         --gutter-width: #{map-get($gridConfig, "gutter-width-xl")}; 
+      } @else { --gutter-width: 20px; }      
+      @if (map-get($gridConfig, "container-padding-xl") ) { 
+         --container-padding: #{map-get($gridConfig, "container-padding-xl")}; 
+      } @else { --container-padding: 40px; }      
+      @if (map-get($gridConfig, "container-width-xl") ) { 
+         --container-width: #{map-get($gridConfig, "container-width-xl")}; 
+      } @else { --container-width: 1200px; }  
+
+      --column-width: calc( ( ( 100vw - ( 100vw - var(--container-width) + (2 * var(--container-padding) ) ) ) * 0.083333333333 ) - var(--gutter-width) );
+   }
+}
+
+
+/*
+ *	GRID SETTINGS: Define A Universal Spacer Increment ( use --column-width to make it scale to columns )
+ */
+$spacer: ''; 
+
+   @if (map-get($gridConfig, "spacer") ) {
+      $spacer: #{map-get($gridConfig, "spacer")}; 
+   } @else { $spacer: #{calc(var(--column-width)/8)}; }
+
+   :root { --spacer: #{$spacer}; } // Assign to var
+
+}
+
+@if (map-get($gridConfig, "grid") ) {
+   
+   /*
+   *  Build Grid
+   */
+   body {
+      overflow-x: hidden;
+
+      .wrapper {
+         display: block;
+         position: relative;
+         width: 100vw;
+         overflow: hidden;
+
+         .container {
+            display: block;
+            position: relative;
+
+            // Center Container
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 100vw;
+
+            // Define Container Width
+            max-width: var(--container-width);
+
+            // Enable overlapping containers
+            &.fix {
+               position: absolute !important;
+               top: 0;
+               left: 0;
+            }
+
+            > .container { height: 100% } // Make nested containers fit height
+                     
+
+            // Enable Container Full Width
+            /* 
+             *  In order for the columns to respect the container width and 
+             *  stay uniform, a 'standard' .container must be nested within 
+             *  a .full-width.container if a full width container is used, 
+             *  otherwise the columns will stretch to fill full width and 
+             *  the componant classes will not work.
+             */
+            &.full-width { 
+               max-width: 100vw !important;
+               padding-left: 0 !important;
+               padding-right: 0 !important;
+            }
+
+            .row {
+               display: flex;
+               position: relative;
+               flex-flow: row wrap;
+
+               justify-content: flex-start;
+               align-items: stretch;
+
+               align-content: initial;
+
+               padding: 0 var(--container-padding);
+
+               margin-left: calc( 0px - ( var(--gutter-width) / 2 ) );
+               margin-right: calc( 0px - ( var(--gutter-width) / 2 ) );
+
+               height: 100%;
+
+               // Handle Nested Rows
+               .row {
+                  padding-left: 0;
+                  padding-right: 0;
+                  margin-left: calc( 0px - var(--gutter-width) / 2 );
+                  margin-right: calc( 0px - var(--gutter-width) / 2 );			
+
+                  align-content: flex-start; // By default vertically align nested content to top
+
+               }
+
+               .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+
+                  position: relative;
+
+                  flex: 0 0 auto;
+
+                  // Add Gutter
+                  padding-left: calc( var(--gutter-width) / 2 );
+                  padding-right: calc( var(--gutter-width) / 2 );
+
+
+                  &:after, > div:after {
+                     content: "";
+                     display: block;
+                     clear: both;
+                  }
+               }
+
+               $column_sizes: 
+                  8.3333333333%, 
+                  16.6666666667%, 
+                  25%, 
+                  33.3333333333%, 
+                  41.6666666667%, 
+                  50%, 
+                  58.3333333333%, 
+                  66.6666666667%, 
+                  75%, 
+                  83.3333333333%, 
+                  91.6666666667%, 
+                  100%;
+
+               @each $size in $column_sizes {
+                  $i: index($column_sizes, $size);
+                  .col-#{$i} { width: $size }
+               }
+               .offset-0 { margin-left: 0; }
+               @each $size in $column_sizes {
+                  $i: index($column_sizes, $size);
+                  .offset-#{$i} { margin-left: $size }
+               }
+               @include breakpoint-sm {	
+                  .offset-sm-0 { margin-left: 0; }		
+                  @each $size in $column_sizes {
+                     $i: index($column_sizes, $size);
+                     .col-sm-#{$i} { width: $size }
+                  }
+                  @each $size in $column_sizes {
+                     $i: index($column_sizes, $size);
+                     .offset-sm-#{$i} { margin-left: $size }
+                  }
+               }
+               @include breakpoint-md {		
+                  .offset-md-0 { margin-left: 0; }			
+                  @each $size in $column_sizes {
+                     $i: index($column_sizes, $size);
+                     .col-md-#{$i} { width: $size }
+                  }
+                  @each $size in $column_sizes {
+                     $i: index($column_sizes, $size);
+                     .offset-md-#{$i} { margin-left: $size }
+                  }
+               }
+               @include breakpoint-lg {			
+                  .offset-lg-0 { margin-left: 0; }		
+                  @each $size in $column_sizes {
+                     $i: index($column_sizes, $size);
+                     .col-lg-#{$i} { width: $size }
+                  }
+                  @each $size in $column_sizes {
+                     $i: index($column_sizes, $size);
+                     .offset-lg-#{$i} { margin-left: $size }
+                  }
+               }
+               @include breakpoint-xl {			
+                  .offset-xl-0 { margin-left: 0; }		
+                  @each $size in $column_sizes {
+                     $i: index($column_sizes, $size);
+                     .col-xl-#{$i} { width: $size }
+                  }
+                  @each $size in $column_sizes {
+                     $i: index($column_sizes, $size);
+                     .offset-xl-#{$i} { margin-left: $size }
+                  }
+               }
+
+            }
+         }
+      }
+   }
+
+   // Background Cover on containers, rows and columns
+   .container, .row, div[class*="col-"] {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+   }   
+
+}

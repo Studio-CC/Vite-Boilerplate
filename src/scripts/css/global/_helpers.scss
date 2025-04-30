@@ -1,0 +1,45 @@
+/*
+ *	Background Size: Cover
+ */
+ @mixin backgroundCover {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.bg-cover { @include backgroundCover }
+
+
+/*
+ *	Background Size: Contain
+ */
+@mixin backgroundContain {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+.bg-contain { @include backgroundContain }
+
+
+/*
+ *	Fit Media
+ */
+@mixin fit {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;	
+}
+img.fit, .fit img, video.fit, .fit video { @include fit }
+
+
+/*
+ *	Cover parent ( emulate background-size: cover w/ <img> )
+ */
+@mixin cover {
+   @include fit;
+   position: absolute;
+   object-fit: cover;
+   height: 100%;
+}
+
+img.cover, .cover img, video.cover, .cover video { @include cover }

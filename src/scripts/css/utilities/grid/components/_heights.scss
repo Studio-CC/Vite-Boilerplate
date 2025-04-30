@@ -1,0 +1,96 @@
+$num: 10; // Number of classes to generate 
+
+@mixin fill-height { height: 100% }
+
+@mixin h-auto { height: #{$i}; }
+
+@mixin h-sm($i) {
+   @include breakpoint-sm { 
+      height: #{$i}; 
+   }
+}
+@mixin h-md($i) {
+   @include breakpoint-md { 
+      height: #{$i}; 
+   }
+}
+@mixin h-lg($i) {
+   @include breakpoint-lg { 
+      height: #{$i}; 
+   }
+}
+@mixin h-xl($i) {
+   @include breakpoint-xl { 
+      height: #{$i}; 
+   }
+}
+
+@if (map-get($gridConfig, "heights")) {
+   
+   /*
+   *	Height Classes
+   */
+
+   $num: 10; // Number of classes to generate 
+
+   .fill-height { height: 100% }
+
+   .h-auto { height: auto !important }
+   @for $i from 1 through $num { 
+      .h-#{$i}0 { height: #{$i}0vh !important; height: #{$i}0dvh !important }
+      .h-#{$i}0-lvh { height: #{$i}0lvh !important }
+   }
+   @for $i from 1 through $num { 
+      .h-#{$i}5 { height: #{$i}5vh !important; height: #{$i}5dvh !important }
+      .h-#{$i}5-lvh { height: #{$i}5lvh !important }
+   }
+
+   @include breakpoint-sm {
+      .h-sm-auto { height: auto !important }
+      @for $i from 1 through $num { 
+         .h-sm-#{$i}0 { height: #{$i}0vh !important; height: #{$i}0dvh !important }
+         .h-sm-#{$i}0-lvh { height: #{$i}0lvh !important }
+      }
+      @for $i from 1 through $num { 
+         .h-sm-#{$i}5 { height: #{$i}5vh !important; height: #{$i}5dvh !important }
+         .h-sm-#{$i}5-lvh { height: #{$i}5lvh !important }
+      }
+   }
+
+   @include breakpoint-md {
+      .h-md-auto { height: auto !important }
+      @for $i from 1 through $num { 
+         .h-md-#{$i}0 { height: #{$i}0vh !important; height: #{$i}0dvh !important }
+         .h-md-#{$i}0-lvh { height: #{$i}0lvh !important }
+      }
+      @for $i from 1 through $num { 
+         .h-md-#{$i}5 { height: #{$i}5vh !important; height: #{$i}5dvh !important }
+         .h-md-#{$i}5-lvh { height: #{$i}5lvh !important }
+      }
+   }
+
+   @include breakpoint-lg {
+      .h-lg-auto { height: auto !important }
+      @for $i from 1 through $num { 
+         .h-lg-#{$i}0 { height: #{$i}0vh !important; height: #{$i}0dvh !important }
+         .h-lg-#{$i}0-lvh { height: #{$i}0lvh !important }
+      }
+      @for $i from 1 through $num { 
+         .h-lg-#{$i}5 { height: #{$i}5vh !important; height: #{$i}5dvh !important }
+         .h-lg-#{$i}5-lvh { height: #{$i}5lvh !important }
+      }
+   }
+
+   @include breakpoint-xl {
+      .h-xl-auto { height: auto !important }
+      @for $i from 1 through $num { 
+         .h-xl-#{$i}0 { height: #{$i}0vh !important; height: #{$i}0dvh !important }
+         .h-xl-#{$i}0-lvh { height: #{$i}0lvh !important }
+      }
+      @for $i from 1 through $num { 
+         .h-xl-#{$i}5 { height: #{$i}5vh !important; height: #{$i}5dvh !important }
+         .h-xl-#{$i}5-lvh { height: #{$i}5lvh !important }
+      }
+   }
+
+}

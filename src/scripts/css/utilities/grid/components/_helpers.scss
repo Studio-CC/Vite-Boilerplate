@@ -1,0 +1,71 @@
+@if (map-get($gridConfig, "helpers")) {
+
+   /*
+   *	Display
+   */
+   .flex { display: flex !important }
+   .block { display: block !important }
+   .inline { display: inline !important }
+   .inline-block { display: inline-block !important }
+
+   @include breakpoint-sm {
+      .flex-sm { display: flex !important }
+      .block-sm { display: block !important }
+      .inline-sm { display: inline !important }
+      .inline-block-sm { display: inline-block !important }
+   }
+
+   @include breakpoint-md {
+      .flex-md { display: flex !important }
+      .block-md { display: block !important }
+      .inline-md { display: inline !important }
+      .inline-block-md { display: inline-block !important }
+   }
+
+   @include breakpoint-lg {
+      .flex-lg { display: flex !important }
+      .block-lg { display: block !important }
+      .inline-lg { display: inline !important }
+      .inline-block-lg { display: inline-block !important }
+   }
+
+   @include breakpoint-xl {
+      .flex-xl { display: flex !important }
+      .block-xl { display: block !important }
+      .inline-xl { display: inline !important }
+      .inline-block-xl { display: inline-block !important }
+   }
+
+
+   /*
+   *	Position
+   */
+   .rel { position: relative !important }
+   .abs { position: absolute !important }
+   .fix { position: fixed !important }
+   
+   @include breakpoint-sm {
+      .rel-sm { position: relative !important }
+      .abs-sm { position: absolute !important }
+      .fix-sm { position: fixed !important }
+   }
+   
+   @include breakpoint-md {
+      .rel-md { position: relative !important }
+      .abs-md { position: absolute !important }
+      .fix-md { position: fixed !important }
+   }
+   
+   @include breakpoint-lg {
+      .rel-lg { position: relative !important }
+      .abs-lg { position: absolute !important }
+      .fix-lg { position: fixed !important }
+   }
+
+   @include breakpoint-xl {
+      .rel-xl { position: relative !important }
+      .abs-xl { position: absolute !important }
+      .fix-xl { position: fixed !important }
+   }
+
+}

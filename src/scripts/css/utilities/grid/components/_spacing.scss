@@ -1,0 +1,380 @@
+@mixin m($value) { margin: calc( var(--spacer) * #{$value} ) !important } 
+@mixin mt($value) { margin-top: calc( var(--spacer) * #{$value} ) !important }
+@mixin mb($value) { margin-bottom: calc( var(--spacer) * #{$value} ) !important }
+@mixin my($value) { margin-top: calc( var(--spacer) * #{$value} ) !important; margin-bottom: calc( var(--spacer) * #{$value} ) !important }
+@mixin ml($value) { margin-left: calc( var(--spacer) * #{$value} ) !important }
+@mixin mr($value) { margin-right: calc( var(--spacer) * #{$value} ) !important }
+@mixin mx($value) { margin-left: calc( var(--spacer) * #{$value} ) !important; margin-right: calc( var(--spacer) * #{$value} ) !important }
+
+@mixin m-sm($value) { @include breakpoint-sm { margin: calc( var(--spacer) * #{$value} ) !important } }
+@mixin mt-sm($value) { @include breakpoint-sm { margin-top: calc( var(--spacer) * #{$value} ) !important } }
+@mixin mb-sm($value) { @include breakpoint-sm { margin-bottom: calc( var(--spacer) * #{$value} ) !important } }
+@mixin my-sm($value) { @include breakpoint-sm { margin-top: calc( var(--spacer) * #{$value} ) !important; margin-bottom: calc( var(--spacer) * #{$value} ) !important } }
+@mixin ml-sm($value) { @include breakpoint-sm { margin-left: calc( var(--spacer) * #{$value} ) !important } }
+@mixin mr-sm($value) { @include breakpoint-sm { margin-right: calc( var(--spacer) * #{$value} ) !important } }
+@mixin mx-sm($value) { @include breakpoint-sm { margin-left: calc( var(--spacer) * #{$value} ) !important; margin-right: calc( var(--spacer) * #{$value} ) !important } }
+
+@mixin m-md($value) { @include breakpoint-md { margin: calc( var(--spacer) * #{$value} ) !important } }
+@mixin mt-md($value) { @include breakpoint-md { margin-top: calc( var(--spacer) * #{$value} ) !important } }
+@mixin mb-md($value) { @include breakpoint-md { margin-bottom: calc( var(--spacer) * #{$value} ) !important } }
+@mixin my-md($value) { @include breakpoint-md { margin-top: calc( var(--spacer) * #{$value} ) !important; margin-bottom: calc( var(--spacer) * #{$value} ) !important } }
+@mixin ml-md($value) { @include breakpoint-md { margin-left: calc( var(--spacer) * #{$value} ) !important } }
+@mixin mr-md($value) { @include breakpoint-md { margin-right: calc( var(--spacer) * #{$value} ) !important } }
+@mixin mx-md($value) { @include breakpoint-md { margin-left: calc( var(--spacer) * #{$value} ) !important; margin-right: calc( var(--spacer) * #{$value} ) !important } }
+
+@mixin m-lg($value) { @include breakpoint-lg { margin: calc( var(--spacer) * #{$value} ) !important } }
+@mixin mt-lg($value) { @include breakpoint-lg { margin-top: calc( var(--spacer) * #{$value} ) !important } }
+@mixin mb-lg($value) { @include breakpoint-lg { margin-bottom: calc( var(--spacer) * #{$value} ) !important } }
+@mixin my-lg($value) { @include breakpoint-lg { margin-top: calc( var(--spacer) * #{$value} ) !important; margin-bottom: calc( var(--spacer) * #{$value} ) !important } }
+@mixin ml-lg($value) { @include breakpoint-lg { margin-left: calc( var(--spacer) * #{$value} ) !important } }
+@mixin mr-lg($value) { @include breakpoint-lg { margin-right: calc( var(--spacer) * #{$value} ) !important } }
+@mixin mx-lg($value) { @include breakpoint-lg { margin-left: calc( var(--spacer) * #{$value} ) !important; margin-right: calc( var(--spacer) * #{$value} ) !important } }
+
+@mixin m-column($value) { margin: calc( var(--column-width) * #{$value} ) !important }
+@mixin mt-column($value) { margin-top: calc( var(--column-width) * #{$value} ) !important }
+@mixin mb-column($value) { margin-bottom: calc( var(--column-width) * #{$value} ) !important }
+@mixin my-column($value) { margin-top: calc( var(--column-width) * #{$value} ) !important; margin-bottom: calc( var(--column-width) * #{$value} ) !important }
+@mixin ml-column($value) { margin-left: calc( var(--column-width) * #{$value} ) !important }
+@mixin mr-column($value) { margin-right: calc( var(--column-width) * #{$value} ) !important }
+@mixin mx-column($value) { margin-left: calc( var(--column-width) * #{$value} ) !important; margin-right: calc( var(--column-width) * #{$value} ) !important }
+
+@mixin m-sm-column($value) { @include breakpoint-sm { margin: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mt-sm-column($value) { @include breakpoint-sm { margin-top: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mb-sm-column($value) { @include breakpoint-sm { margin-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin my-sm-column($value) { @include breakpoint-sm { margin-top: calc( var(--column-width) * #{$value} ) !important; margin-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin ml-sm-column($value) { @include breakpoint-sm { margin-left: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mr-sm-column($value) { @include breakpoint-sm { margin-right: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mx-sm-column($value) { @include breakpoint-sm { margin-left: calc( var(--column-width) * #{$value} ) !important; margin-right: calc( var(--column-width) * #{$value} ) !important } }
+
+@mixin m-md-column($value) { @include breakpoint-md { margin: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mt-md-column($value) { @include breakpoint-md { margin-top: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mb-md-column($value) { @include breakpoint-md { margin-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin my-md-column($value) { @include breakpoint-md { margin-top: calc( var(--column-width) * #{$value} ) !important; margin-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin ml-md-column($value) { @include breakpoint-md { margin-left: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mr-md-column($value) { @include breakpoint-md { margin-right: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mx-md-column($value) { @include breakpoint-md { margin-left: calc( var(--column-width) * #{$value} ) !important; margin-right: calc( var(--column-width) * #{$value} ) !important } }
+
+@mixin m-lg-column($value) { @include breakpoint-lg { margin: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mt-lg-column($value) { @include breakpoint-lg { margin-top: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mb-lg-column($value) { @include breakpoint-lg { margin-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin my-lg-column($value) { @include breakpoint-lg { margin-top: calc( var(--column-width) * #{$value} ) !important; margin-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin ml-lg-column($value) { @include breakpoint-lg { margin-left: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mr-lg-column($value) { @include breakpoint-lg { margin-right: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mx-lg-column($value) { @include breakpoint-lg { margin-left: calc( var(--column-width) * #{$value} ) !important; margin-right: calc( var(--column-width) * #{$value} ) !important } }
+
+@mixin m-xl-column($value) { @include breakpoint-xl { margin: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mt-xl-column($value) { @include breakpoint-xl { margin-top: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mb-xl-column($value) { @include breakpoint-xl { margin-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin my-xl-column($value) { @include breakpoint-xl { margin-top: calc( var(--column-width) * #{$value} ) !important; margin-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin ml-xl-column($value) { @include breakpoint-xl { margin-left: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mr-xl-column($value) { @include breakpoint-xl { margin-right: calc( var(--column-width) * #{$value} ) !important } }
+@mixin mx-xl-column($value) { @include breakpoint-xl { margin-left: calc( var(--column-width) * #{$value} ) !important; margin-right: calc( var(--column-width) * #{$value} ) !important } }
+
+@mixin p($value) { padding: calc( var(--spacer) * #{$value} ) !important } 
+@mixin pt($value) { padding-top: calc( var(--spacer) * #{$value} ) !important }
+@mixin pb($value) { padding-bottom: calc( var(--spacer) * #{$value} ) !important }
+@mixin py($value) { padding-top: calc( var(--spacer) * #{$value} ) !important; padding-bottom: calc( var(--spacer) * #{$value} ) !important }
+@mixin pl($value) { padding-left: calc( var(--spacer) * #{$value} ) !important }
+@mixin pr($value) { padding-right: calc( var(--spacer) * #{$value} ) !important }
+@mixin px($value) { padding-left: calc( var(--spacer) * #{$value} ) !important; padding-right: calc( var(--spacer) * #{$value} ) !important }
+
+@mixin p-sm($value) { @include breakpoint-sm { padding: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pt-sm($value) { @include breakpoint-sm { padding-top: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pb-sm($value) { @include breakpoint-sm { padding-bottom: calc( var(--spacer) * #{$value} ) !important } }
+@mixin py-sm($value) { @include breakpoint-sm { padding-top: calc( var(--spacer) * #{$value} ) !important; padding-bottom: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pl-sm($value) { @include breakpoint-sm { padding-left: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pr-sm($value) { @include breakpoint-sm { padding-right: calc( var(--spacer) * #{$value} ) !important } }
+@mixin px-sm($value) { @include breakpoint-sm { padding-left: calc( var(--spacer) * #{$value} ) !important; padding-right: calc( var(--spacer) * #{$value} ) !important } }
+
+@mixin p-md($value) { @include breakpoint-md { padding: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pt-md($value) { @include breakpoint-md { padding-top: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pb-md($value) { @include breakpoint-md { padding-bottom: calc( var(--spacer) * #{$value} ) !important } }
+@mixin py-md($value) { @include breakpoint-md { padding-top: calc( var(--spacer) * #{$value} ) !important; padding-bottom: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pl-md($value) { @include breakpoint-md { padding-left: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pr-md($value) { @include breakpoint-md { padding-right: calc( var(--spacer) * #{$value} ) !important } }
+@mixin px-md($value) { @include breakpoint-md { padding-left: calc( var(--spacer) * #{$value} ) !important; padding-right: calc( var(--spacer) * #{$value} ) !important } }
+
+@mixin p-lg($value) { @include breakpoint-lg { padding: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pt-lg($value) { @include breakpoint-lg { padding-top: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pb-lg($value) { @include breakpoint-lg { padding-bottom: calc( var(--spacer) * #{$value} ) !important } }
+@mixin py-lg($value) { @include breakpoint-lg { padding-top: calc( var(--spacer) * #{$value} ) !important; padding-bottom: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pl-lg($value) { @include breakpoint-lg { padding-left: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pr-lg($value) { @include breakpoint-lg { padding-right: calc( var(--spacer) * #{$value} ) !important } }
+@mixin px-lg($value) { @include breakpoint-lg { padding-left: calc( var(--spacer) * #{$value} ) !important; padding-right: calc( var(--spacer) * #{$value} ) !important } }
+
+@mixin p-xl($value) { @include breakpoint-xl { padding: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pt-xl($value) { @include breakpoint-xl { padding-top: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pb-xl($value) { @include breakpoint-xl { padding-bottom: calc( var(--spacer) * #{$value} ) !important } }
+@mixin py-xl($value) { @include breakpoint-xl { padding-top: calc( var(--spacer) * #{$value} ) !important; padding-bottom: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pl-xl($value) { @include breakpoint-xl { padding-left: calc( var(--spacer) * #{$value} ) !important } }
+@mixin pr-xl($value) { @include breakpoint-xl { padding-right: calc( var(--spacer) * #{$value} ) !important } }
+@mixin px-xl($value) { @include breakpoint-xl { padding-left: calc( var(--spacer) * #{$value} ) !important; padding-right: calc( var(--spacer) * #{$value} ) !important } }
+
+@mixin p-column($value) { padding: calc( var(--column-width) * #{$value} ) !important }
+@mixin pt-column($value) { padding-top: calc( var(--column-width) * #{$value} ) !important }
+@mixin pb-column($value) { padding-bottom: calc( var(--column-width) * #{$value} ) !important }
+@mixin py-column($value) { padding-top: calc( var(--column-width) * #{$value} ) !important; padding-bottom: calc( var(--column-width) * #{$value} ) !important }
+@mixin pl-column($value) { padding-left: calc( var(--column-width) * #{$value} ) !important }
+@mixin pr-column($value) { padding-right: calc( var(--column-width) * #{$value} ) !important }
+@mixin px-column($value) { padding-left: calc( var(--column-width) * #{$value} ) !important; padding-right: calc( var(--column-width) * #{$value} ) !important }
+
+@mixin p-sm-column($value) { @include breakpoint-sm { padding: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pt-sm-column($value) { @include breakpoint-sm { padding-top: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pb-sm-column($value) { @include breakpoint-sm { padding-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin py-sm-column($value) { @include breakpoint-sm { padding-top: calc( var(--column-width) * #{$value} ) !important; padding-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pl-sm-column($value) { @include breakpoint-sm { padding-left: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pr-sm-column($value) { @include breakpoint-sm { padding-right: calc( var(--column-width) * #{$value} ) !important } }
+@mixin px-sm-column($value) { @include breakpoint-sm { padding-left: calc( var(--column-width) * #{$value} ) !important; padding-right: calc( var(--column-width) * #{$value} ) !important } }
+
+@mixin p-md-column($value) { @include breakpoint-md { padding: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pt-md-column($value) { @include breakpoint-md { padding-top: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pb-md-column($value) { @include breakpoint-md { padding-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin py-md-column($value) { @include breakpoint-md { padding-top: calc( var(--column-width) * #{$value} ) !important; padding-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pl-md-column($value) { @include breakpoint-md { padding-left: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pr-md-column($value) { @include breakpoint-md { padding-right: calc( var(--column-width) * #{$value} ) !important } }
+@mixin px-md-column($value) { @include breakpoint-md { padding-left: calc( var(--column-width) * #{$value} ) !important; padding-right: calc( var(--column-width) * #{$value} ) !important } }
+
+@mixin p-lg-column($value) { @include breakpoint-lg { padding: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pt-lg-column($value) { @include breakpoint-lg { padding-top: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pb-lg-column($value) { @include breakpoint-lg { padding-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin py-lg-column($value) { @include breakpoint-lg { padding-top: calc( var(--column-width) * #{$value} ) !important; padding-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pl-lg-column($value) { @include breakpoint-lg { padding-left: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pr-lg-column($value) { @include breakpoint-lg { padding-right: calc( var(--column-width) * #{$value} ) !important } }
+@mixin px-lg-column($value) { @include breakpoint-lg { padding-left: calc( var(--column-width) * #{$value} ) !important; padding-right: calc( var(--column-width) * #{$value} ) !important } }
+
+@mixin p-lg-column($value) { @include breakpoint-xl { padding: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pt-xl-column($value) { @include breakpoint-xl { padding-top: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pb-xl-column($value) { @include breakpoint-xl { padding-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin py-xl-column($value) { @include breakpoint-xl { padding-top: calc( var(--column-width) * #{$value} ) !important; padding-bottom: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pl-xl-column($value) { @include breakpoint-xl { padding-left: calc( var(--column-width) * #{$value} ) !important } }
+@mixin pr-xl-column($value) { @include breakpoint-xl { padding-right: calc( var(--column-width) * #{$value} ) !important } }
+@mixin px-xl-column($value) { @include breakpoint-xl { padding-left: calc( var(--column-width) * #{$value} ) !important; padding-right: calc( var(--column-width) * #{$value} ) !important } }
+
+
+@if (map-get($gridConfig, "spacing")) {
+
+   /*
+   *
+   *	Mixins & Classes For Spacing, based on multiples of the univeral $spacer variable, defined in _grid.scss
+   *
+   *  For $spacer relatad mixins/classes use eg. @include mt-(breakpoint)-(n) in scss or .mt-(breakpoint)-(n) in markup
+   *
+   *  For classes use eg. @include mt-gutter-(breakpoint)-(n) in scss or .mt-gutter-(breakpoint)-(n) in markup 
+   *
+   *  Mixins: @include pt(10) / @include pt-sm(10)  // Multiple of $spacer
+   *
+   */
+
+   $num: 6; // Number of classes to generate 
+
+   @for $i from 0 through $num { 
+   
+      .m-#{$i} { margin: calc( var(--spacer) * #{$i} ) !important }
+      .mt-#{$i} { margin-top: calc( var(--spacer) * #{$i} ) !important }
+      .mb-#{$i} { margin-bottom: calc( var(--spacer) * #{$i} ) !important }
+      .my-#{$i} { margin-top: calc( var(--spacer) * #{$i} ) !important; margin-bottom: calc( var(--spacer) * #{$i} ) !important }
+      .ml-#{$i} { margin-left: calc( var(--spacer) * #{$i} ) !important }
+      .mr-#{$i} { margin-right: calc( var(--spacer) * #{$i} ) !important }
+      .mx-#{$i} { margin-left: calc( var(--spacer) * #{$i} ) !important; margin-right: calc( var(--spacer) * #{$i} ) !important }
+   
+      .m-column-#{$i} { margin: calc( var(--column-width) * #{$i} ) !important }
+      .mt-column-#{$i} { margin-top: calc( var(--column-width) * #{$i} ) !important }
+      .mb-column-#{$i} { margin-bottom: calc( var(--column-width) * #{$i} ) !important }
+      .my-column-#{$i} { margin-top: calc( var(--column-width) * #{$i} ) !important; margin-bottom: calc( var(--column-width) * #{$i} ) !important }
+      .ml-column-#{$i} { margin-left: calc( var(--column-width) * #{$i} ) !important }
+      .mr-column-#{$i} { margin-right: calc( var(--column-width) * #{$i} ) !important }
+      .mx-column-#{$i} { margin-left: calc( var(--column-width) * #{$i} ) !important; margin-right: calc( var(--column-width) * #{$i} ) !important }   
+   
+   }
+   
+   @include breakpoint-sm { 
+      @for $i from 0 through $num { 
+   
+         .m-sm-#{$i} { margin: calc( var(--spacer) * #{$i} ) !important }
+         .mt-sm-#{$i} { margin-top: calc( var(--spacer) * #{$i} ) !important }
+         .mb-sm-#{$i} { margin-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .my-sm-#{$i} { margin-top: calc( var(--spacer) * #{$i} ) !important; margin-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .ml-sm-#{$i} { margin-left: calc( var(--spacer) * #{$i} ) !important }
+         .mr-sm-#{$i} { margin-right: calc( var(--spacer) * #{$i} ) !important }
+         .mx-sm-#{$i} { margin-left: calc( var(--spacer) * #{$i} ) !important; margin-right: calc( var(--spacer) * #{$i} ) !important }
+   
+         .m-sm-column-#{$i} { margin: calc( var(--column-width) * #{$i} ) !important }
+         .mt-sm-column-#{$i} { margin-top: calc( var(--column-width) * #{$i} ) !important }
+         .mb-sm-column-#{$i} { margin-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .my-sm-column-#{$i} { margin-top: calc( var(--column-width) * #{$i} ) !important; margin-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .ml-sm-column-#{$i} { margin-left: calc( var(--column-width) * #{$i} ) !important }
+         .mr-sm-column-#{$i} { margin-right: calc( var(--column-width) * #{$i} ) !important }
+         .mx-sm-column-#{$i} { margin-left: calc( var(--column-width) * #{$i} ) !important; margin-right: calc( var(--column-width) * #{$i} ) !important }      
+   
+      }
+   }
+   @include breakpoint-md { 
+      @for $i from 0 through $num { 
+   
+         .m-md-#{$i} { margin: calc( var(--spacer) * #{$i} ) !important }
+         .mt-md-#{$i} { margin-top: calc( var(--spacer) * #{$i} ) !important }
+         .mb-md-#{$i} { margin-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .my-md-#{$i} { margin-top: calc( var(--spacer) * #{$i} ) !important; margin-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .ml-md-#{$i} { margin-left: calc( var(--spacer) * #{$i} ) !important }
+         .mr-md-#{$i} { margin-right: calc( var(--spacer) * #{$i} ) !important }
+         .mx-md-#{$i} { margin-left: calc( var(--spacer) * #{$i} ) !important; margin-right: calc( var(--spacer) * #{$i} ) !important }
+   
+         .m-md-column-#{$i} { margin: calc( var(--column-width) * #{$i} ) !important }
+         .mt-md-column-#{$i} { margin-top: calc( var(--column-width) * #{$i} ) !important }
+         .mb-md-column-#{$i} { margin-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .my-md-column-#{$i} { margin-top: calc( var(--column-width) * #{$i} ) !important; margin-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .ml-md-column-#{$i} { margin-left: calc( var(--column-width) * #{$i} ) !important }
+         .mr-md-column-#{$i} { margin-right: calc( var(--column-width) * #{$i} ) !important }
+         .mx-md-column-#{$i} { margin-left: calc( var(--column-width) * #{$i} ) !important; margin-right: calc( var(--column-width) * #{$i} ) !important }
+   
+      }
+   }
+   @include breakpoint-lg { 
+      @for $i from 0 through $num { 
+   
+         .m-lg-#{$i} { margin: calc( var(--spacer) * #{$i} ) !important }
+         .mt-lg-#{$i} { margin-top: calc( var(--spacer) * #{$i} ) !important }
+         .mb-lg-#{$i} { margin-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .my-lg-#{$i} { margin-top: calc( var(--spacer) * #{$i} ) !important; margin-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .ml-lg-#{$i} { margin-left: calc( var(--spacer) * #{$i} ) !important }
+         .mr-lg-#{$i} { margin-right: calc( var(--spacer) * #{$i} ) !important }
+         .mx-lg-#{$i} { margin-left: calc( var(--spacer) * #{$i} ) !important; margin-right: calc( var(--spacer) * #{$i} ) !important }
+   
+         .m-lg-column-#{$i} { margin: calc( var(--column-width) * #{$i} ) !important }
+         .mt-lg-column-#{$i} { margin-top: calc( var(--column-width) * #{$i} ) !important }
+         .mb-lg-column-#{$i} { margin-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .my-lg-column-#{$i} { margin-top: calc( var(--column-width) * #{$i} ) !important; margin-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .ml-lg-column-#{$i} { margin-left: calc( var(--column-width) * #{$i} ) !important }
+         .mr-lg-column-#{$i} { margin-right: calc( var(--column-width) * #{$i} ) !important }
+         .mx-lg-column-#{$i} { margin-left: calc( var(--column-width) * #{$i} ) !important; margin-right: calc( var(--column-width) * #{$i} ) !important }
+   
+      }
+   }
+   @include breakpoint-xl { 
+      @for $i from 0 through $num { 
+   
+         .m-xl-#{$i} { margin: calc( var(--spacer) * #{$i} ) !important }
+         .mt-xl-#{$i} { margin-top: calc( var(--spacer) * #{$i} ) !important }
+         .mb-xl-#{$i} { margin-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .my-xl-#{$i} { margin-top: calc( var(--spacer) * #{$i} ) !important; margin-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .ml-xl-#{$i} { margin-left: calc( var(--spacer) * #{$i} ) !important }
+         .mr-xl-#{$i} { margin-right: calc( var(--spacer) * #{$i} ) !important }
+         .mx-xl-#{$i} { margin-left: calc( var(--spacer) * #{$i} ) !important; margin-right: calc( var(--spacer) * #{$i} ) !important }
+   
+         .m-xl-column-#{$i} { margin: calc( var(--column-width) * #{$i} ) !important }
+         .mt-xl-column-#{$i} { margin-top: calc( var(--column-width) * #{$i} ) !important }
+         .mb-xl-column-#{$i} { margin-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .my-xl-column-#{$i} { margin-top: calc( var(--column-width) * #{$i} ) !important; margin-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .ml-xl-column-#{$i} { margin-left: calc( var(--column-width) * #{$i} ) !important }
+         .mr-xl-column-#{$i} { margin-right: calc( var(--column-width) * #{$i} ) !important }
+         .mx-xl-column-#{$i} { margin-left: calc( var(--column-width) * #{$i} ) !important; margin-right: calc( var(--column-width) * #{$i} ) !important }
+   
+      }
+   }
+
+   @for $i from 0 through $num { 
+   
+      .p-#{$i} { padding: calc( var(--spacer) * #{$i} ) !important }
+      .pt-#{$i} { padding-top: calc( var(--spacer) * #{$i} ) !important }
+      .pb-#{$i} { padding-bottom: calc( var(--spacer) * #{$i} ) !important }
+      .py-#{$i} { padding-top: calc( var(--spacer) * #{$i} ) !important; padding-bottom: calc( var(--spacer) * #{$i} ) !important }
+      .pl-#{$i} { padding-left: calc( var(--spacer) * #{$i} ) !important }
+      .pr-#{$i} { padding-right: calc( var(--spacer) * #{$i} ) !important }
+      .px-#{$i} { padding-left: calc( var(--spacer) * #{$i} ) !important; padding-right: calc( var(--spacer) * #{$i} ) !important }
+   
+      .p-column-#{$i} { padding: calc( var(--column-width) * #{$i} ) !important }
+      .pt-column-#{$i} { padding-top: calc( var(--column-width) * #{$i} ) !important }
+      .pb-column-#{$i} { padding-bottom: calc( var(--column-width) * #{$i} ) !important }
+      .py-column-#{$i} { padding-top: calc( var(--column-width) * #{$i} ) !important; padding-bottom: calc( var(--column-width) * #{$i} ) !important }
+      .pl-column-#{$i} { padding-left: calc( var(--column-width) * #{$i} ) !important }
+      .pr-column-#{$i} { padding-right: calc( var(--column-width) * #{$i} ) !important }
+      .px-column-#{$i} { padding-left: calc( var(--column-width) * #{$i} ) !important; padding-right: calc( var(--column-width) * #{$i} ) !important }   
+   
+   }
+   
+   @include breakpoint-sm { 
+      @for $i from 0 through $num { 
+   
+         .p-sm-#{$i} { padding: calc( var(--spacer) * #{$i} ) !important }
+         .pt-sm-#{$i} { padding-top: calc( var(--spacer) * #{$i} ) !important }
+         .pb-sm-#{$i} { padding-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .py-sm-#{$i} { padding-top: calc( var(--spacer) * #{$i} ) !important; padding-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .pl-sm-#{$i} { padding-left: calc( var(--spacer) * #{$i} ) !important }
+         .pr-sm-#{$i} { padding-right: calc( var(--spacer) * #{$i} ) !important }
+         .px-sm-#{$i} { padding-left: calc( var(--spacer) * #{$i} ) !important; padding-right: calc( var(--spacer) * #{$i} ) !important }
+   
+         .p-sm-column-#{$i} { padding: calc( var(--column-width) * #{$i} ) !important }
+         .pt-sm-column-#{$i} { padding-top: calc( var(--column-width) * #{$i} ) !important }
+         .pb-sm-column-#{$i} { padding-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .py-sm-column-#{$i} { padding-top: calc( var(--column-width) * #{$i} ) !important; padding-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .pl-sm-column-#{$i} { padding-left: calc( var(--column-width) * #{$i} ) !important }
+         .pr-sm-column-#{$i} { padding-right: calc( var(--column-width) * #{$i} ) !important }
+         .px-sm-column-#{$i} { padding-left: calc( var(--column-width) * #{$i} ) !important; padding-right: calc( var(--column-width) * #{$i} ) !important }      
+   
+      }
+   }
+   @include breakpoint-md { 
+      @for $i from 0 through $num { 
+   
+         .p-md-#{$i} { padding: calc( var(--spacer) * #{$i} ) !important }
+         .pt-md-#{$i} { padding-top: calc( var(--spacer) * #{$i} ) !important }
+         .pb-md-#{$i} { padding-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .py-md-#{$i} { padding-top: calc( var(--spacer) * #{$i} ) !important; padding-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .pl-md-#{$i} { padding-left: calc( var(--spacer) * #{$i} ) !important }
+         .pr-md-#{$i} { padding-right: calc( var(--spacer) * #{$i} ) !important }
+         .px-md-#{$i} { padding-left: calc( var(--spacer) * #{$i} ) !important; padding-right: calc( var(--spacer) * #{$i} ) !important }
+   
+         .p-md-column-#{$i} { padding: calc( var(--column-width) * #{$i} ) !important }
+         .pt-md-column-#{$i} { padding-top: calc( var(--column-width) * #{$i} ) !important }
+         .pb-md-column-#{$i} { padding-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .py-md-column-#{$i} { padding-top: calc( var(--column-width) * #{$i} ) !important; padding-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .pl-md-column-#{$i} { padding-left: calc( var(--column-width) * #{$i} ) !important }
+         .pr-md-column-#{$i} { padding-right: calc( var(--column-width) * #{$i} ) !important }
+         .px-md-column-#{$i} { padding-left: calc( var(--column-width) * #{$i} ) !important; padding-right: calc( var(--column-width) * #{$i} ) !important }
+   
+      }
+   }
+   @include breakpoint-lg { 
+      @for $i from 0 through $num { 
+   
+         .p-lg-#{$i} { padding: calc( var(--spacer) * #{$i} ) !important }
+         .pt-lg-#{$i} { padding-top: calc( var(--spacer) * #{$i} ) !important }
+         .pb-lg-#{$i} { padding-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .py-lg-#{$i} { padding-top: calc( var(--spacer) * #{$i} ) !important; padding-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .pl-lg-#{$i} { padding-left: calc( var(--spacer) * #{$i} ) !important }
+         .pr-lg-#{$i} { padding-right: calc( var(--spacer) * #{$i} ) !important }
+         .px-lg-#{$i} { padding-left: calc( var(--spacer) * #{$i} ) !important; padding-right: calc( var(--spacer) * #{$i} ) !important }
+   
+         .p-lg-column-#{$i} { padding: calc( var(--column-width) * #{$i} ) !important }
+         .pt-lg-column-#{$i} { padding-top: calc( var(--column-width) * #{$i} ) !important }
+         .pb-lg-column-#{$i} { padding-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .py-lg-column-#{$i} { padding-top: calc( var(--column-width) * #{$i} ) !important; padding-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .pl-lg-column-#{$i} { padding-left: calc( var(--column-width) * #{$i} ) !important }
+         .pr-lg-column-#{$i} { padding-right: calc( var(--column-width) * #{$i} ) !important }
+         .px-lg-column-#{$i} { padding-left: calc( var(--column-width) * #{$i} ) !important; padding-right: calc( var(--column-width) * #{$i} ) !important }
+   
+      }
+   }
+   @include breakpoint-xl { 
+      @for $i from 0 through $num { 
+   
+         .p-xl-#{$i} { padding: calc( var(--spacer) * #{$i} ) !important }
+         .pt-xl-#{$i} { padding-top: calc( var(--spacer) * #{$i} ) !important }
+         .pb-xl-#{$i} { padding-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .py-xl-#{$i} { padding-top: calc( var(--spacer) * #{$i} ) !important; padding-bottom: calc( var(--spacer) * #{$i} ) !important }
+         .pl-xl-#{$i} { padding-left: calc( var(--spacer) * #{$i} ) !important }
+         .pr-xl-#{$i} { padding-right: calc( var(--spacer) * #{$i} ) !important }
+         .px-xl-#{$i} { padding-left: calc( var(--spacer) * #{$i} ) !important; padding-right: calc( var(--spacer) * #{$i} ) !important }
+   
+         .p-xl-column-#{$i} { padding: calc( var(--column-width) * #{$i} ) !important }
+         .pt-xl-column-#{$i} { padding-top: calc( var(--column-width) * #{$i} ) !important }
+         .pb-xl-column-#{$i} { padding-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .py-xl-column-#{$i} { padding-top: calc( var(--column-width) * #{$i} ) !important; padding-bottom: calc( var(--column-width) * #{$i} ) !important }
+         .pl-xl-column-#{$i} { padding-left: calc( var(--column-width) * #{$i} ) !important }
+         .pr-xl-column-#{$i} { padding-right: calc( var(--column-width) * #{$i} ) !important }
+         .px-xl-column-#{$i} { padding-left: calc( var(--column-width) * #{$i} ) !important; padding-right: calc( var(--column-width) * #{$i} ) !important }
+   
+      }
+   }
+
+}

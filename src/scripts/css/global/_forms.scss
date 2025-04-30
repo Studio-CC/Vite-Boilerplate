@@ -1,0 +1,61 @@
+/*
+ *	Form Elements
+ */
+
+button, 
+button:focus, 
+button:active, 
+button:focus-visible {
+   outline: none !important;
+   box-shadow: none !important;
+   background: inherit;
+   border: none;
+}
+
+/* Remove active styles on mobile (iOS & Android) */
+button:focus,
+button:active {
+   -webkit-tap-highlight-color: transparent;
+}
+
+/* Optional: Disable focus styles completely */
+*:focus {
+   outline: none !important;
+   box-shadow: none !important;
+}
+
+/* Ensure touch interactions don't trigger browser styles */
+html, body {
+   -webkit-tap-highlight-color: transparent;
+   -webkit-touch-callout: none;
+}
+
+
+//
+
+
+input, 
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="submit"],
+textarea,
+select {
+
+}
+
+input[type="submit"] {
+
+}
+
+textarea {
+	height: 90px;
+	resize: none;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;	
+}

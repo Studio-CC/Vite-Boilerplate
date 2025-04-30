@@ -1,0 +1,56 @@
+@mixin order($i) { order: #{$i} }
+
+@mixin order-sm($i) {
+   @include breakpoint-sm { 
+      order: #{$i} 
+   }
+}
+@mixin order-md($i) {
+   @include breakpoint-md { 
+      order: #{$i} 
+   }
+}
+@mixin order-lg($i) {
+   @include breakpoint-lg { 
+      order: #{$i} 
+   }
+}
+@mixin order-xl($i) {
+   @include breakpoint-xl { 
+      order: #{$i} 
+   }
+}
+
+
+@if (map-get($gridConfig, "ordering")) {
+
+   /*
+   *	Create Ordering Classes 
+   */
+
+   $num: 10; // Number of classes to generate
+
+   @for $i from 0 through $num { .order-#{$i} { order: #{$i} } }
+
+   @include breakpoint-sm { 
+      @for $i from 0 through $num {
+         .order-sm-#{$i} { order: #{$i} } 
+      }
+   }
+   @include breakpoint-md { 
+      @for $i from 0 through $num {
+         .order-md-#{$i} { order: #{$i} } 
+      }
+   }
+   @include breakpoint-lg { 
+      @for $i from 0 through $num {
+         .order-lg-#{$i} { order: #{$i} } 
+      }
+   }
+   @include breakpoint-xl { 
+      @for $i from 0 through $num {
+         .order-xl-#{$i} { order: #{$i} } 
+      }
+   }
+
+}

@@ -1,0 +1,77 @@
+$gridConfig: (
+   
+   // Enable Grid
+   'grid' : true, // 10kb ( 95kb with every component enabled )
+
+   // Demo Theme
+   'theme' : true, // 1kb
+
+   // Define Breakpoints
+   'sm' : '640px',
+   'md' : '769px',
+   'lg' : '1024px',
+   'xl' : '1500px',
+
+
+   /*
+    * Containers & Gutters
+    * 
+    * Define variable gutter, container padding and container widths per breakpoint
+    * All values, including zero MUST have a unit, eg px or vw
+    */
+
+   // Base
+   "container-width"       : "100vw",
+   "container-padding"     : "12px",
+   "gutter-width"          : "12px",
+
+   // Breakpoint SM
+   "container-width-sm"    : "640px",
+   "container-padding-sm"  : "24px",
+   "gutter-width-sm"       : "24px",
+
+   // Breakpoint MD
+   "container-width-md"    : "769px",
+   "container-padding-md"  : "24px",
+   "gutter-width-md"       : "24px",
+
+   // Breakpoint LG
+   "container-width-lg"    : "1024px",
+   "container-padding-lg"  : "24px",
+   "gutter-width-lg"       : "24px",
+
+   // Breakpoint XL
+   "container-width-xl"    : "1280px",
+   "container-padding-xl"  : "24px",
+   "gutter-width-xl"       : "24px",
+
+
+   /*
+    * Universal Spacer
+    *
+    * This is used for all spacing classes and mixins
+    *
+    *	Define A Universal Spacer Increment ( use --column-width to make it relative to column width )
+    *
+    */
+   "spacer" : "var(--gutter-width)",
+   // "spacer" : "var(--column-width)/4",
+
+
+   // Import Components
+   'breakpoint-helper' : true, // 1kb
+   'spacing' : true, // 60kb
+   'text-align' : true, // 1kb
+   'heights' : true, // 1kb
+   'z-index' : true, // 1kb
+   'vertical-align' : true, // 1kb
+   'show-hide' : true, // 1kb
+   'ordering' : true, // 1kb
+   'stretch' : true, // 7kb
+   'shift' : true, // 11kb
+   'flush' : true, // 1kb
+   'helpers' : true, // 1kb   
+
+) !default;
+
+@import 'utilities/grid/grid';

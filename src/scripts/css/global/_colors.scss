@@ -1,0 +1,17 @@
+/*
+ *	Define Colour Variables
+ */
+:root {
+   --white: #fff;
+   --black: #000;
+}
+
+
+/*
+ *	Colour Classes
+ */
+.white-bg { background-color: var(--white) !important }
+.white-text, .white-text * { color: var(--white) !important }
+ 
+.black-bg { background-color: var(--black) !important }
+.black-text, .black-text * { color: var(--black) !important }

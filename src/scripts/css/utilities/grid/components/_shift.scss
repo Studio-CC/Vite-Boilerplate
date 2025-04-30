@@ -1,0 +1,97 @@
+@mixin shift-up($value) { position: relative; top: calc( 0px - ( var(--spacer) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--spacer) * #{$i} ) ) }
+@mixin shift-down($value) { position: relative; top: calc( 0px + ( var(--spacer) * #{$i} ) )  }
+@mixin shift-up-sm($value) { @include breakpoint-sm { position: relative; top: calc( 0px - ( var(--spacer) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--spacer) * #{$i} ) ) } }
+@mixin shift-down-sm($value) { @include breakpoint-sm { position: relative; top: calc( 0px + ( var(--spacer) * #{$i} ) ) } }
+@mixin shift-up-md($value) { @include breakpoint-md { position: relative; top: calc( 0px - ( var(--spacer) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--spacer) * #{$i} ) ) } }
+@mixin shift-down-md($value) { @include breakpoint-md { position: relative; top: calc( 0px + ( var(--spacer) * #{$i} ) ) } }
+@mixin shift-up-lg($value) { @include breakpoint-lg { position: relative; top: calc( 0px - ( var(--spacer) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--spacer) * #{$i} ) ) } }
+@mixin shift-down-lg($value) { @include breakpoint-lg { position: relative; top: calc( 0px + ( var(--spacer) * #{$i} ) ) } }
+@mixin shift-up-xl($value) { @include breakpoint-xl { position: relative; top: calc( 0px - ( var(--spacer) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--spacer) * #{$i} ) ) } }
+@mixin shift-down-xl($value) { @include breakpoint-xl { position: relative; top: calc( 0px + ( var(--spacer) * #{$i} ) ) } }
+
+@mixin shift-up-column($value) { position: relative; top: calc( 0px - ( var(--column-width) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--column-width) * #{$i} ) ) }
+@mixin shift-down-column($value) { position: relative; top: calc( 0px + ( var(--column-width) * #{$i} ) )  }
+@mixin shift-up-sm-column($value) { @include breakpoint-sm { position: relative; top: calc( 0px - ( var(--column-width) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--column-width) * #{$i} ) ) } }
+@mixin shift-down-sm-column($value) { @include breakpoint-sm { position: relative; top: calc( 0px + ( var(--column-width) * #{$i} ) ) } }
+@mixin shift-up-md-column($value) { @include breakpoint-md { position: relative; top: calc( 0px - ( var(--column-width) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--column-width) * #{$i} ) ) } }
+@mixin shift-down-md-column($value) { @include breakpoint-md { position: relative; top: calc( 0px + ( var(--column-width) * #{$i} ) ) } }
+@mixin shift-up-lg-column($value) { @include breakpoint-lg { position: relative; top: calc( 0px - ( var(--column-width) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--column-width) * #{$i} ) ) } }
+@mixin shift-down-lg-column($value) { @include breakpoint-lg { position: relative; top: calc( 0px + ( var(--column-width) * #{$i} ) ) } }
+@mixin shift-up-xl-column($value) { @include breakpoint-xl { position: relative; top: calc( 0px - ( var(--column-width) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--column-width) * #{$i} ) ) } }
+@mixin shift-down-xl-column($value) { @include breakpoint-xl { position: relative; top: calc( 0px + ( var(--column-width) * #{$i} ) ) } }
+
+@if (map-get($gridConfig, "shift")) { 
+
+   /*
+   *	Shift Content Up or Down up or down ( based on --var(column width) / --var(gutter-width) / $spacer ) 
+   *
+   *  Usage .shift-[up/down]-[breakpoint]-# / .shift-up-md-2 ( $spacer )
+   *  Usage .shift-[up/down]-[breakpoint]-gutter--# / .shift-up-md-2 ( var(--gutter-width) )
+   *  Usage .shift-[up/down]-[breakpoint]-column--# / .shift-up-md-2 ( var(--column-width) )
+   *
+   */
+
+   
+   $num: 6; // Number of classes to generate
+
+   // Based on $spacer
+   @for $i from 0 through $num { 
+      .shift-up-#{$i} { position: relative; top: calc( 0px - ( var(--spacer) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--spacer) * #{$i} ) ) } 
+      .shift-down-#{$i} { position: relative; top: calc( var(--spacer) * #{$i} ) } 
+   }
+   @include breakpoint-sm { 
+      @for $i from 0 through $num { 
+         .shift-up-sm-#{$i} { position: relative; top: calc( 0px - ( var(--spacer) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--spacer) * #{$i} ) ) } 
+         .shift-down-sm-#{$i} { position: relative; top: calc( var(--spacer) * #{$i} ) } 
+      }
+   }
+   @include breakpoint-md { 
+      @for $i from 0 through $num { 
+         .shift-up-md-#{$i} { position: relative; top: calc( 0px - ( var(--spacer) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--spacer) * #{$i} ) ) } 
+         .shift-down-md-#{$i} { position: relative; top: calc( var(--spacer) * #{$i} ) } 
+      }
+   }
+   @include breakpoint-lg { 
+      @for $i from 0 through $num { 
+         .shift-up-lg-#{$i} { position: relative; top: calc( 0px - ( var(--spacer) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--spacer) * #{$i} ) ) } 
+         .shift-down-lg-#{$i} { position: relative; top: calc( var(--spacer) * #{$i} ) } 
+      }
+   }
+   @include breakpoint-xl { 
+      @for $i from 0 through $num { 
+         .shift-up-xl-#{$i} { position: relative; top: calc( 0px - ( var(--spacer) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--spacer) * #{$i} ) ) } 
+         .shift-down-xl-#{$i} { position: relative; top: calc( var(--spacer) * #{$i} ) } 
+      }
+   }
+
+   // Based on var(--column-width)
+   @for $i from 0 through $num { 
+      .shift-up-column-#{$i} { position: relative; top: calc( 0px - ( var(--column-width) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--column-width) * #{$i} ) ) }
+      .shift-down-column-#{$i} { position: relative; top: calc( var(--column-width) * #{$i} ) } 
+   }
+   @include breakpoint-sm { 
+      @for $i from 0 through $num { 
+         .shift-up-sm-column-#{$i} { position: relative; top: calc( 0px - ( var(--column-width) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--column-width) * #{$i} ) ) } 
+         .shift-down-sm-column-#{$i} { position: relative; top: calc( var(--column-width) * #{$i} ) } 
+      }
+   }
+   @include breakpoint-md { 
+      @for $i from 0 through $num { 
+         .shift-up-md-column-#{$i} { position: relative; top: calc( 0px - ( var(--column-width) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--column-width) * #{$i} ) ) } 
+         .shift-down-md-column-#{$i} { position: relative; top: calc( var(--column-width) * #{$i} ) } 
+      }
+   }
+   @include breakpoint-lg { 
+      @for $i from 0 through $num { 
+         .shift-up-lg-column-#{$i} { position: relative; top: calc( 0px - ( var(--column-width) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--column-width) * #{$i} ) ) } 
+         .shift-down-lg-column-#{$i} { position: relative; top: calc( var(--column-width) * #{$i} ) } 
+      }
+   }
+   @include breakpoint-xl { 
+      @for $i from 0 through $num { 
+         .shift-up-xl-column-#{$i} { position: relative; top: calc( 0px - ( var(--column-width) * #{$i} ) ); margin-bottom: calc( 0px - ( var(--column-width) * #{$i} ) ) } 
+         .shift-down-xl-column-#{$i} { position: relative; top: calc( var(--column-width) * #{$i} ) } 
+      }
+   }
+
+}

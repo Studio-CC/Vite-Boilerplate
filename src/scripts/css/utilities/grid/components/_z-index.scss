@@ -1,0 +1,55 @@
+@mixin z($i) { z-index: #{$i} }
+
+@mixin z-sm($i) {
+   @include breakpoint-sm { 
+      z-index: #{$i} 
+   }
+}
+@mixin z-md($i) {
+   @include breakpoint-md { 
+      z-index: #{$i} 
+   }
+}
+@mixin z-lg($i) {
+   @include breakpoint-lg { 
+      z-index: #{$i} 
+   }
+}
+@mixin z-xl($i) {
+   @include breakpoint-xl { 
+      z-index: #{$i} 
+   }
+}
+
+@if (map-get($gridConfig, "z-index")) {
+
+   /*
+    *	Create z-index Classes 
+    */
+
+   $num: 6; // Number of classes to generate 
+
+   @for $i from 0 through $num { .z-#{$i} { z-index: #{$i} } }
+
+   @include breakpoint-sm { 
+      @for $i from 0 through $num {
+         .z-sm-#{$i} { z-index: #{$i} } 
+      }
+   }
+   @include breakpoint-md { 
+      @for $i from 0 through $num {
+         .z-md-#{$i} { z-index: #{$i} } 
+      }
+   }
+   @include breakpoint-lg { 
+      @for $i from 0 through $num {
+         .z-lg-#{$i} { z-index: #{$i} } 
+      }
+   }
+   @include breakpoint-xl { 
+      @for $i from 0 through $num {
+         .z-xl-#{$i} { z-index: #{$i} } 
+      }
+   }
+
+}

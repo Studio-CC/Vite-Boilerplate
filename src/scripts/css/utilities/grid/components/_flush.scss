@@ -1,0 +1,50 @@
+@mixin flush {
+   width: 100vw !important;
+   margin-left: calc( ( 0px - var(--container-padding) ) + ( var(--gutter-width) / 2 ) ) !important;
+   max-width: calc( 100% + ( var(--container-padding) + var(--gutter-width) ) ) !important;
+   padding-left: var(--container-padding) !important;
+   padding-right: var(--container-padding) !important;	
+}
+
+@if (map-get($gridConfig, "flush")) {
+
+   /*
+   *	Flush
+   *
+   *	Force a column item within a fixed width ( standard ) 
+   *	.container, to become 'flush' to the edges of the 
+   *	viewport, and retain the correct padding etc.
+   *	This can be useful for making a fixed width image
+   *	become full width on mobile for example.
+   *
+   */
+
+   .flush {
+      @include flush 
+   }
+
+   @media screen and ( max-width: $breakpoint-xl ) { 
+      .flush-xl { 
+         @include flush 
+      } 
+   }
+
+   @media screen and ( max-width: $breakpoint-lg ) { 
+      .flush-lg { 
+         @include flush 
+      } 
+   }
+
+   @media screen and ( max-width: $breakpoint-md ) { 
+      .flush-md { 
+         @include flush 
+      } 
+   }
+
+   @media screen and ( max-width: $breakpoint-sm ) { 
+      .flush-sm { 
+         @include flush 
+      } 
+   }
+
+}

@@ -1,0 +1,23 @@
+@if (map-get($gridConfig, "show-hide")) {
+
+   /*
+    *	Create classes to show / hide elements @ specific breakpoints 
+    */
+
+   // .show- starts hidden..
+   .show-sm, .show-md, .show-lg, .show-xl,
+   .show-sm-inline, .show-md-inline, .show-lg-inline, .show-xl-inline { display: none }
+   @include breakpoint-sm { .show-sm { display: block } }
+   @include breakpoint-md { .show-md { display: block } }
+   @include breakpoint-lg { .show-lg { display: block } }
+   @include breakpoint-xl { .show-xl { display: block } }
+   @include breakpoint-sm { .show-sm-inline { display: inline-block } }
+   @include breakpoint-md { .show-md-inline { display: inline-block } }
+   @include breakpoint-lg { .show-lg-inline { display: inline-block } }
+   @include breakpoint-xl { .show-xl-inline { display: inline-block } }
+   @include breakpoint-sm { .hide-sm { display: none } }
+   @include breakpoint-md { .hide-md { display: none } }
+   @include breakpoint-lg { .hide-lg { display: none } }
+   @include breakpoint-xl { .hide-xl { display: none } }
+
+}

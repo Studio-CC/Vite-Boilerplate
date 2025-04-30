@@ -1,0 +1,59 @@
+@mixin v-align-top { display: flex; flex-direction: column; height: 100%; justify-content: flex-start }
+@mixin v-align-middle { display: flex; flex-direction: column; height: 100%; justify-content: center }
+@mixin v-align-bottom { display: flex; flex-direction: column; height: 100%; justify-content: flex-end }
+@mixin v-align-sm-top { @include breakpoint-sm { display: flex; flex-direction: column; height: 100%; justify-content: flex-start } }
+@mixin v-align-sm-middle { @include breakpoint-sm { display: flex; flex-direction: column; height: 100%; justify-content: center } }
+@mixin v-align-sm-bottom { @include breakpoint-sm { display: flex; flex-direction: column; height: 100%; justify-content: flex-end } }
+@mixin v-align-md-top { @include breakpoint-md { display: flex; flex-direction: column; height: 100%; justify-content: flex-start } }
+@mixin v-align-md-middle { @include breakpoint-md { display: flex; flex-direction: column; height: 100%; justify-content: center } }
+@mixin v-align-md-bottom { @include breakpoint-md { display: flex; flex-direction: column; height: 100%; justify-content: flex-end } }
+@mixin v-align-lg-top { @include breakpoint-lg { display: flex; flex-direction: column; height: 100%; justify-content: flex-start } }
+@mixin v-align-lg-middle { @include breakpoint-lg { display: flex; flex-direction: column; height: 100%; justify-content: center } }
+@mixin v-align-lg-bottom { @include breakpoint-lg { display: flex; flex-direction: column; height: 100%; justify-content: flex-end } }
+@mixin v-align-xl-middle { @include breakpoint-xl { display: flex; flex-direction: column; height: 100%; justify-content: center } }
+@mixin v-align-xl-bottom { @include breakpoint-xl { display: flex; flex-direction: column; height: 100%; justify-content: flex-end } }
+
+@if (map-get($gridConfig, "vertical-align")) {
+
+   /*
+   *	Vertical Alignment Classes 
+   *
+   *  Do not use these on col- or .container, only on a nested standalone div
+   *  They also enforce flex so include content within a div to return to block
+   */
+   
+   .v-align-top, .v-align-middle, .v-align-bottom, .v-align-sm-top, .v-align-sm-middle, .v-align-sm-bottom, .v-align-md-top, .v-align-md-middle, .v-align-md-bottom, .v-align-lg-top, .v-align-lg-middle, .v-align-lg-bottom, .v-align-xl-top, .v-align-xl-middle, .v-align-xl-bottom {
+      display: flex;
+      flex-direction: column;
+      height: 100%;	
+   }
+   
+   .v-align-top { justify-content: flex-start }
+   .v-align-middle { justify-content: center }
+   .v-align-bottom { justify-content: flex-end }		
+   
+   @include breakpoint-sm {
+      .v-align-sm-top { justify-content: flex-start }
+      .v-align-sm-middle { justify-content: center }
+      .v-align-sm-bottom { justify-content: flex-end }
+   }
+   
+   @include breakpoint-md {
+      .v-align-md-top { justify-content: flex-start }
+      .v-align-md-middle { justify-content: center }
+      .v-align-md-bottom { justify-content: flex-end }
+   }
+   
+   @include breakpoint-lg {
+      .v-align-lg-top { justify-content: flex-start }
+      .v-align-lg-middle { justify-content: center }
+      .v-align-lg-bottom { justify-content: flex-end }
+   }
+
+   @include breakpoint-xl {
+      .v-align-xl-top { justify-content: flex-start }
+      .v-align-xl-middle { justify-content: center }
+      .v-align-xl-bottom { justify-content: flex-end }
+   }
+
+}
